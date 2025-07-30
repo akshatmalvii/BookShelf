@@ -1,0 +1,28 @@
+[
+  {
+    "orderId": "BS-2025-07-001",
+    "date": "July 15, 2025",
+    "total": "₹848",
+    "status": "Delivered",
+    "items": [
+      { "title": "Atomic Habits", "price": 599 },
+      { "title": "The Alchemist", "price": 249 }
+    ]
+  },
+  {
+    "orderId": "BS-2025-07-002",
+    "date": "July 22, 2025",
+    "total": "₹499",
+    "status": "Shipped",
+    "items": [
+      { "title": "Sapiens: A Brief History of Humankind", "price": 499 }
+    ]
+  },
+  {
+    "orderId": "BS-2025-06-005",
+    "date": "June 10, 2025",
+    "total": "₹120",
+    "status": "Delivered",
+    "items": [{ "title": "Satyana Prayogo", "price": 120 }]
+  }
+]

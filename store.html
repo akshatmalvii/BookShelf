@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShelf - Your Online Bookstore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <a href="store.html" class="logo">BookShelf</a>
+            <nav class="main-nav">
+                <a href="store.html" class="nav-link active">Home</a>
+                <a href="store.html?filter=bestsellers" class="nav-link">Bestsellers</a>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="action-btn">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="account.html" class="action-btn" id="user-account-link">
+                    <i class="ph ph-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content container">
+        <!-- Filters Sidebar -->
+        <aside class="filters-sidebar">
+            <h2>Filters</h2>
+            <div class="filter-group">
+                <input type="text" id="search-input" class="search-box" placeholder="Search by title or author...">
+            </div>
+            <div class="filter-group">
+                <h3>Genre</h3>
+                <div id="genre-filter-options"></div>
+            </div>
+            <div class="filter-group">
+                <h3>Price Range</h3>
+                <div id="price-filter-options">
+                    <label><input type="radio" name="price" value="all" checked> All</label>
+                    <label><input type="radio" name="price" value="0-250"> Under ₹250</label>
+                    <label><input type="radio" name="price" value="250-500"> ₹250 - ₹500</label>
+                    <label><input type="radio" name="price" value="500-1000"> ₹500+</label>
+                </div>
+                 <div class="price-slider-container">
+                    <label for="price-slider">Max Price: ₹<span id="price-slider-value">1000</span></label>
+                    <input type="range" id="price-slider" min="100" max="1000" value="1000" step="50">
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Rating</h3>
+                <div id="rating-filter-options">
+                    <label><input type="radio" name="rating" value="all" checked> All</label>
+                    <label><input type="radio" name="rating" value="4.5"> 4.5 Stars & Up</label>
+                    <label><input type="radio" name="rating" value="4"> 4 Stars & Up</label>
+                    <label><input type="radio" name="rating" value="3"> 3 Stars & Up</label>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Language</h3>
+                <div id="language-filter-options">
+                     <label><input type="checkbox" name="language" value="English"> English</label>
+                     <label><input type="checkbox" name="language" value="Hindi"> Hindi</label>
+                     <label><input type="checkbox" name="language" value="Gujarati"> Gujarati</label>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Availability</h3>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="in-stock-toggle">
+                    <span class="slider"></span>
+                    Show only in-stock
+                </label>
+            </div>
+            <button id="reset-filters-btn" class="reset-btn">Reset Filters</button>
+        </aside>
+
+        <!-- Book Listing -->
+        <main class="book-listing-area">
+            <div class="listing-header">
+                <p id="results-count">Showing all books...</p>
+                <div class="sort-container">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by" name="sort-by">
+                        <option value="default">Relevance</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating-desc">Rating: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            <div id="book-list-container" class="book-grid">
+                <div class="loader"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BookShelf. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

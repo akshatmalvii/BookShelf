@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details - BookShelf</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+<header class="header">
+    <div class="container">
+        <a href="store.html" class="logo">BookShelf</a>
+        <nav class="main-nav">
+            <a href="store.html" class="nav-link">Home</a>
+            <a href="store.html?filter=bestsellers" class="nav-link">Bestsellers</a>
+        </nav>
+        <div class="header-actions">
+            <a href="cart.html" class="action-btn">
+                <i class="ph ph-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="account.html" class="action-btn" id="user-account-link">
+                <i class="ph ph-user"></i>
+            </a>
+        </div>
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <main class="container product-page-content">
+        <div id="product-detail-container" class="product-detail-grid">
+            <!-- Product details will be dynamically inserted here -->
+            <div class="loader"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BookShelf. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/product.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

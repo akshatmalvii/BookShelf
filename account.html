@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - BookShelf</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <a href="store.html" class="logo">BookShelf</a>
+            <nav class="main-nav">
+                <a href="store.html" class="nav-link">Home</a>
+                <a href="store.html?filter=bestsellers" class="nav-link">Bestsellers</a>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="action-btn">
+                    <i class="ph ph-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="account.html" class="action-btn" id="user-account-link">
+                    <i class="ph ph-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container account-page-content">
+        <h1>My Account</h1>
+        <div class="account-grid">
+            <!-- Left Column for Details and Address -->
+            <div class="account-left-column">
+                <div class="account-details-box">
+                    <h2>Account Details</h2>
+                    <div id="user-details">
+                        <!-- User details will be populated by JS -->
+                    </div>
+                    <button id="logout-btn" class="auth-btn">Logout</button>
+                </div>
+
+                <div class="account-address-box">
+                    <h2>Shipping Address</h2>
+                    <div id="address-display">
+                        <!-- Saved address will be displayed here -->
+                    </div>
+                    <form id="address-form">
+                        <div class="form-group">
+                            <label for="address-line">Address (House No, Society, Area)</label>
+                            <textarea id="address-line" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="address-city">City</label>
+                            <input type="text" id="address-city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address-state">State</label>
+                            <select id="address-state" required>
+                                <option value="">Select State</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Delhi">Delhi</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="address-pincode">Pincode</label>
+                            <input type="text" id="address-pincode" required pattern="[0-9]{6}">
+                        </div>
+                        <button type="submit" class="auth-btn">Save Address</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Right Column for Order History -->
+            <div class="order-history-box">
+                <h2>Order History</h2>
+                <div id="order-history-container">
+                    <!-- Dummy order history will be populated by JS -->
+                    <div class="loader"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 BookShelf. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/account.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
